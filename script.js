@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.classList.add('copied');
                 
                 if (toast) {
-                    toast.textContent = textToCopy + ' copie !';
+                    toast.textContent = 'Copié dans le presse-papier : ' + textToCopy;
                     toast.classList.add('show');
                     setTimeout(() => {
                         toast.classList.remove('show');

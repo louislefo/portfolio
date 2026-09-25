@@ -9,7 +9,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Background subtle glow -->
+    <div class="bg-glow" aria-hidden="true"></div>
+
     <!-- Navigation -->
     <header class="header">
         <div class="container nav-container">
@@ -63,34 +66,44 @@
     <main>
         <!-- Hero Section -->
         <section id="hero" class="hero-section">
-            <div class="container hero-layout">
-                <div class="hero-avatar-wrapper">
-                    <img src="https://github.com/louislefo.png" alt="Photo de profil Louis Le Forestier" class="hero-avatar">
+            <div class="container hero-container">
+                <div class="hero-visual">
+                    <div class="hero-avatar-glow"></div>
+                    <div class="hero-avatar-frame">
+                        <img src="https://github.com/louislefo.png" alt="Photo de profil Louis Le Forestier" class="hero-avatar">
+                    </div>
                 </div>
 
-                <div class="hero-text-content">
+                <div class="hero-content">
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Disponible pour stage technique &bull; 16 a 20 semaines</span>
+                    </div>
+
                     <h1 class="hero-title">Louis Le Forestier</h1>
                     
                     <p class="hero-subtitle">
-                        GenIA & Agents IA &bull; Developpement Full-Stack SaaS &bull; Data Engineering & ML
+                        Ingenieur Data & GenIA <span class="subtitle-bullet">&bull;</span> Developpeur Full-Stack SaaS
                     </p>
                     
                     <p class="hero-description">
-                        Etudiant ingenieur a l'ESILV avec une solide experience internationale et operationnelle (EBTrans, SG CIB, DeVinci Junior). Specialise dans la conception d'architectures logicielles, l'integration de modeles LLM/GenIA et l'automatisation de donnees.
+                        Etudiant ingenieur a l'ESILV (Majeure Data & IA, specialisation GenIA) et a l'Universite Hanyang (Seoul). Specialise dans la conception d'architectures logicielles SaaS, l'integration de modeles LLM / agents IA autonomes et l'ingenierie de donnees.
                     </p>
 
-                    <div class="stage-alert-box">
-                        <span class="stage-alert-title">Recherche de stage technique (16 a 20 semaines) :</span>
-                        <p class="stage-alert-text">Disponible a Paris / IDF ou Teletravail &bull; Full-Stack SaaS, GenIA & Agents, Data Engineering, DevOps.</p>
+                    <div class="hero-highlights">
+                        <span class="highlight-pill">ESILV Data & IA</span>
+                        <span class="highlight-pill">Hanyang Univ. Seoul</span>
+                        <span class="highlight-pill">GenIA & Agents IA</span>
+                        <span class="highlight-pill">FastAPI & Next.js</span>
                     </div>
 
                     <div class="hero-cta-group">
                         <a href="#projects" class="btn btn-primary">
-                            <span>Decouvrir mes projets</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            <span>Explorer les realisations</span>
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                         </a>
                         <a href="#contact" class="btn btn-secondary">
-                            <span>Me contacter</span>
+                            <span>Prendre contact</span>
                         </a>
                     </div>
                 </div>
@@ -102,34 +115,33 @@
             <div class="container">
                 <div class="section-header">
                     <span class="section-label">Profil</span>
-                    <h2 class="section-title">A Propos de Moi</h2>
+                    <h2 class="section-title">A Propos</h2>
                 </div>
 
                 <div class="about-grid">
                     <div class="about-card main-about">
-                        <h3>Vision & Competences</h3>
                         <p>
-                            Actuellement en cursus d'ingenieur a l'ESILV au sein de la <strong>Majeure Data & IA</strong> (specialisation <strong>GenIA - Intelligence Artificielle Generative</strong>), mon cursus inclut une immersion internationale avec un semestre d'echange academique a l'<strong>Universite Hanyang a Seoul</strong>.
+                            Actuellement en cursus d'ingenieur a l'ESILV au sein de la <strong>Majeure Data & IA</strong> (specialisation <strong>GenIA - Intelligence Artificielle Generative</strong>), mon parcours combine une solide formation scientifique a une immersion internationale avec un semestre d'echange academique a l'<strong>Universite Hanyang a Seoul</strong>.
                         </p>
                         <p>
-                            Mon travail allie une base technique en code pur (Python, C++, SQL, React/TypeScript) aux technologies emergentes : agents IA autonomes, pipelines d'automatisation des flux (n8n), conteneurisation Docker et serveurs Linux auto-heberges.
+                            Mon approche technique allie la rigueur du developpement (Python, C++, SQL, React/TypeScript) aux architectures logicielles modernes : conception d'agents IA autonomes, pipelines d'automatisation des flux (n8n), conteneurisation Docker et serveurs Linux.
                         </p>
                         <p>
-                            Mes missions en entreprise (EBTrans, DeVinci Junior, Societe Generale CIB) et mes projets de developpement SaaS (KeyStone-Ledger, Finly) me conferent une vision rigoureuse orientee produit, performance et fiabilite.
+                            Mes interventions en entreprise (EBTrans, DeVinci Junior, Societe Generale CIB) et le developpement de plateformes SaaS (KeyStone-Ledger, Finly) nourrissent une vision axee sur la fiabilite, la securite et l'impact metier.
                         </p>
                     </div>
 
                     <div class="about-card info-card">
                         <div class="info-row">
-                            <span class="info-label">Formation principale</span>
+                            <span class="info-label">Formation</span>
                             <span class="info-value">ESILV Paris La Defense (2023 - 2028)</span>
                         </div>
                         <div class="info-row">
-                            <span class="info-label">Echange international</span>
+                            <span class="info-label">Echange Academique</span>
                             <span class="info-value">Hanyang University, Seoul (Coree du Sud)</span>
                         </div>
                         <div class="info-row">
-                            <span class="info-label">Parcours international</span>
+                            <span class="info-label">Mobilite</span>
                             <span class="info-value">Tokyo, Bruxelles, Nantes, Paris</span>
                         </div>
                         <div class="info-row">
@@ -145,8 +157,8 @@
         <section id="experience" class="section experience-section">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-label">Parcours Professionnel</span>
-                    <h2 class="section-title">Experiences en Entreprise</h2>
+                    <span class="section-label">Parcours</span>
+                    <h2 class="section-title">Experiences Professionnelles</h2>
                     <p class="section-desc">Missions en ingenierie de donnees, automatisation IA et finance de marche.</p>
                 </div>
 
@@ -194,7 +206,7 @@
                             Mission au sein de l'equipe AMOA dediee a la fiabilisation et l'industrialisation des donnees operationnelles.
                         </p>
                         <ul class="exp-bullets">
-                            <li><strong>Automatisation IA</strong> : Developpement d'un agent conversationnel (type GPT) pour la comparaison structuree de devis de tracteurs routiers.</li>
+                            <li><strong>Automatisation IA</strong> : Developpement d'un agent conversationnel pour la comparaison structuree de devis de tracteurs routiers.</li>
                             <li><strong>Data Quality</strong> : Automatisation de la detection d'incoherences dans les donnees de trajets logistiques.</li>
                             <li><strong>Traitement de documents</strong> : Conception d'outils d'extraction automatique pour convertir des PDF en donnees tabulaires exploitables.</li>
                             <li><strong>Bases de donnees</strong> : Contribution a la migration d'une base de donnees lors d'une integration post-acquisition.</li>
@@ -251,11 +263,13 @@
                     <article class="project-card" data-category="saas-fintech fullstack">
                         <div class="project-header">
                             <span class="project-tag">SaaS & Audit</span>
-                            <a href="https://github.com/louislefo/saas-keyStone" target="_blank" rel="noopener noreferrer" class="project-link" title="Depot GitHub">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                            </a>
+                            <div class="project-actions">
+                                <a href="https://github.com/louislefo/saas-keyStone" target="_blank" rel="noopener noreferrer" class="project-link" title="Dépôt GitHub" aria-label="Dépôt GitHub KeyStone-Ledger">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                                </a>
+                            </div>
                         </div>
-                        <h3 class="project-title">KeyStone-Ledger (SaaS)</h3>
+                        <h3 class="project-title">KeyStone-Ledger</h3>
                         <p class="project-summary">
                             Solution SaaS automatisee pour l'audit et la certification comptable, assurant la validation approfondie et le traitement certifie des donnees en moins de deux minutes.
                         </p>
@@ -271,9 +285,14 @@
                     <article class="project-card" data-category="saas-fintech fullstack">
                         <div class="project-header">
                             <span class="project-tag">FinTech PWA</span>
-                            <a href="https://github.com/louislefo/Finly" target="_blank" rel="noopener noreferrer" class="project-link" title="Depot GitHub">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                            </a>
+                            <div class="project-actions">
+                                <a href="https://louislefo.github.io/Finly/" target="_blank" rel="noopener noreferrer" class="project-link" title="Accéder au site" aria-label="Accéder au site Finly">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                </a>
+                                <a href="https://github.com/louislefo/Finly" target="_blank" rel="noopener noreferrer" class="project-link" title="Dépôt GitHub" aria-label="Dépôt GitHub Finly">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                                </a>
+                            </div>
                         </div>
                         <h3 class="project-title">Finly</h3>
                         <p class="project-summary">
@@ -291,9 +310,11 @@
                     <article class="project-card" data-category="genia-ai systems">
                         <div class="project-header">
                             <span class="project-tag">GenIA & Backend</span>
-                            <a href="https://github.com/louislefo/gemini-cli-api" target="_blank" rel="noopener noreferrer" class="project-link" title="Depot GitHub">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                            </a>
+                            <div class="project-actions">
+                                <a href="https://github.com/louislefo/gemini-cli-api" target="_blank" rel="noopener noreferrer" class="project-link" title="Dépôt GitHub" aria-label="Dépôt GitHub gemini-cli-api">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                                </a>
+                            </div>
                         </div>
                         <h3 class="project-title">gemini-cli-api</h3>
                         <p class="project-summary">
@@ -311,9 +332,11 @@
                     <article class="project-card" data-category="systems genia-ai">
                         <div class="project-header">
                             <span class="project-tag">Data & Algorithmique</span>
-                            <a href="https://github.com/louislefo/Better_DeVinci" target="_blank" rel="noopener noreferrer" class="project-link" title="Depot GitHub">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                            </a>
+                            <div class="project-actions">
+                                <a href="https://github.com/louislefo/Better_DeVinci" target="_blank" rel="noopener noreferrer" class="project-link" title="Dépôt GitHub" aria-label="Dépôt GitHub Better_DeVinci">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                                </a>
+                            </div>
                         </div>
                         <h3 class="project-title">Better_DeVinci</h3>
                         <p class="project-summary">
@@ -330,9 +353,11 @@
                     <article class="project-card" data-category="genia-ai">
                         <div class="project-header">
                             <span class="project-tag">Machine Learning</span>
-                            <a href="https://github.com/louislefo/Ligue1-ML-Forecaster" target="_blank" rel="noopener noreferrer" class="project-link" title="Depot GitHub">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                            </a>
+                            <div class="project-actions">
+                                <a href="https://github.com/louislefo/Ligue1-ML-Forecaster" target="_blank" rel="noopener noreferrer" class="project-link" title="Dépôt GitHub" aria-label="Dépôt GitHub Ligue1-ML-Forecaster">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                                </a>
+                            </div>
                         </div>
                         <h3 class="project-title">Ligue1-ML-Forecaster</h3>
                         <p class="project-summary">
@@ -350,9 +375,11 @@
                     <article class="project-card" data-category="genia-ai">
                         <div class="project-header">
                             <span class="project-tag">Recherche IA</span>
-                            <a href="https://github.com/louislefo/AI-BASED-APPROACHES-FOR-MARINE-OIL-SPILL-RESPONSE" target="_blank" rel="noopener noreferrer" class="project-link" title="Depot GitHub">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                            </a>
+                            <div class="project-actions">
+                                <a href="https://github.com/louislefo/AI-BASED-APPROACHES-FOR-MARINE-OIL-SPILL-RESPONSE" target="_blank" rel="noopener noreferrer" class="project-link" title="Dépôt GitHub" aria-label="Dépôt GitHub Marine Oil Spill AI">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                                </a>
+                            </div>
                         </div>
                         <h3 class="project-title">Marine Oil Spill AI</h3>
                         <p class="project-summary">
@@ -436,7 +463,7 @@
             <div class="container">
                 <div class="section-header">
                     <span class="section-label">Academique</span>
-                    <h2 class="section-title">Formation & Ouverture Internationale</h2>
+                    <h2 class="section-title">Formation & International</h2>
                 </div>
 
                 <div class="timeline">
@@ -452,7 +479,7 @@
                                     <h4 class="timeline-sub">ESILV (Ecole Superieure d'Ingenieurs Leonard de Vinci) - Paris La Defense</h4>
                                 </div>
                             </div>
-                            <span class="timeline-date">2023 - 2028 (4e annee)</span>
+                            <span class="timeline-date">2023 - 2028</span>
                         </div>
                         <p class="timeline-desc">
                             Cursus d'excellence : intelligence artificielle generative, data science, machine learning, vision par ordinateur, ingenierie logicielle et finance quantitative.
@@ -468,7 +495,7 @@
                                 </div>
                                 <div>
                                     <h3 class="timeline-title">Semestre d'Echange International - Ingenierie</h3>
-                                    <h4 class="timeline-sub">Hanyang University (한양대학교) - Seoul, Coree du Sud</h4>
+                                    <h4 class="timeline-sub">Hanyang University - Seoul, Coree du Sud</h4>
                                 </div>
                             </div>
                             <span class="timeline-date">Septembre 2025 - Janvier 2026</span>
@@ -502,7 +529,7 @@
                     <div class="section-header">
                         <span class="section-label">Contact</span>
                         <h2 class="section-title">Prendre Contact</h2>
-                        <p class="section-desc">Ouvert aux echanges techniques et opportunites de stage en Data Science, GenIA ou Developpement Full-Stack.</p>
+                        <p class="section-desc">Disponible pour echanges techniques et opportunites de stage en GenIA, Data Science ou Full-Stack SaaS.</p>
                     </div>
 
                     <div class="contact-grid">
@@ -510,8 +537,8 @@
                             <span class="contact-label">Email Universitaire</span>
                             <div class="contact-action-row">
                                 <a href="mailto:louis.le_forestier@edu.devinci.fr" class="contact-link" id="emailEdu">louis.le_forestier@edu.devinci.fr</a>
-                                <button class="btn-copy" data-target="emailEdu" title="Copier l'email">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                <button class="btn-copy" data-target="emailEdu" title="Copier l'email" aria-label="Copier l'email universitaire">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     <span class="copy-tooltip">Copie</span>
                                 </button>
                             </div>
@@ -521,8 +548,8 @@
                             <span class="contact-label">Email Personnel</span>
                             <div class="contact-action-row">
                                 <a href="mailto:louisleforestier2@gmail.com" class="contact-link" id="emailPerso">louisleforestier2@gmail.com</a>
-                                <button class="btn-copy" data-target="emailPerso" title="Copier l'email">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                <button class="btn-copy" data-target="emailPerso" title="Copier l'email" aria-label="Copier l'email personnel">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     <span class="copy-tooltip">Copie</span>
                                 </button>
                             </div>
@@ -563,16 +590,20 @@
 
     <!-- Footer -->
     <footer class="footer">
+        <div class="footer-glow" aria-hidden="true"></div>
         <div class="container footer-content">
-            <p>&copy; 2026 Louis Le Forestier &bull; Portfolio & CV</p>
-            <a href="#hero" class="back-to-top" title="Retour en haut">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+            <div class="footer-left">
+                <span class="footer-dot"></span>
+                <p>&copy; 2026 Louis Le Forestier &bull; Portfolio & CV</p>
+            </div>
+            <a href="#hero" class="back-to-top" title="Retour en haut" aria-label="Retour en haut de page">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
             </a>
         </div>
     </footer>
 
     <!-- Toast Notification -->
-    <div class="toast" id="toast">Element copie dans le presse-papier</div>
+    <div class="toast" id="toast">Copié dans le presse-papier</div>
 
     <script src="script.js"></script>
 </body>
